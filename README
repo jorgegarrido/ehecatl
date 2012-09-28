@@ -8,18 +8,18 @@ An erlang driver for read/write nfc smart cards.
 
 ehecatl 
 
-	was tested using nfc smart cards with block size of 4 bytes (8 bits)
+  was tested using nfc smart cards with block size of 4 bytes (8 bits)
 
-	was tested using arygon nfc reader (Arygon NFC/MIFARE Plug & Play Module RS232)
+  was tested using arygon nfc reader (Arygon NFC/MIFARE Plug & Play Module RS232)
 
-	was tested using pcsc lite under CentOS 
+  was tested using pcsc lite under CentOS 
 
 
 ======= how to use ===========
 
 clone the ehecatl project from github: 	
 
-	$ git clone https://
+	$ git clone https://github.com/jorgegarrido/ehecatl
 
 move into ehecatl directory:
 
@@ -82,5 +82,3 @@ where ???? refers to data written in the smart card
 ============= LICENSE ==============
 
 see LICENSE.tx for more information 
-
-=========================================================================================
