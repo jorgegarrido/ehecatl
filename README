@@ -1,11 +1,12 @@
-======= ehecatl - ~ * ~  ===========
+=== ehecatl ~ ~ ~ ~
+====
 
 Ehecatl is the wind god in aztec mythology but also is:
 
 An erlang driver for read/write nfc smart cards.
 
-======= notes ===========
-
+=== notes 
+====
 ehecatl 
 
   was tested using nfc smart cards with block size of 4 bytes (8 bits)
