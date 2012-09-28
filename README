@@ -1,0 +1,86 @@
+======= ehecatl - ~ * ~  ===========
+
+Ehecatl is the wind god in aztec mythology but also is:
+
+An erlang driver for read/write nfc smart cards.
+
+======= notes ===========
+
+ehecatl 
+
+	was tested using nfc smart cards with block size of 4 bytes (8 bits)
+
+	was tested using arygon nfc reader (Arygon NFC/MIFARE Plug & Play Module RS232)
+
+	was tested using pcsc lite under CentOS 
+
+
+======= how to use ===========
+
+clone the ehecatl project from github: 	
+
+	$ git clone https://
+
+move into ehecatl directory:
+
+	$ cd ehecatl
+
+compile ehecatl:
+
+	$ make all
+
+	(maybe warnings appear when compile, and a lib/libehecatl.so must be created)
+
+start ehecatl:
+
+	$ make ehecatl
+
+	(an erlang shell must be opened)
+
+========= starting, reading and writing on nfc smart card ============
+
+in erlang shell:
+
+starts the port driver ehecatl:
+
+	> ehecatl:start().
+	<0.??.0>
+
+now, you must set a smart card near of nfc reader, when you are ready, then:
+
+reading the smart card with ehecatl:
+
+	> ehecatl:flush(read).
+	%% here the reponse
+
+the response will be a string in erlang, but if the block 08 is 
+not writing yet, then the response will be 0
+
+writing the smart card with ehecatl:
+
+	> ehecatl:flush(write).
+	ok
+
+it must write the string "hola" in the block 08 in the smart card, 
+now if you try read again, you will see "hola" as response of read command
+
+============ reding smart cards when is inserted on nfc reader (automatically) ========
+
+In erlang shell:
+
+starts the ehecatl application:
+
+	> application:start(ehecatl).
+	ok
+
+now just swipe a card into nfc reader and you will see:
+
+	> shell got <<"????">>
+
+where ???? refers to data written in the smart card
+
+============= LICENSE ==============
+
+see LICENSE.tx for more information 
+
+=========================================================================================

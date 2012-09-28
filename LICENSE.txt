@@ -1,0 +1,9 @@
+==========================================================================================================
+
+EHECATL - An erlang driver for write/read nfc smart cards
+
+Copyright (C) 2012, Jorge Garrido <jorge.garrido@morelosoft.com>
+
+All rights reserved.
+
+==========================================================================================================
