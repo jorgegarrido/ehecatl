@@ -64,7 +64,7 @@ writing the smart card with ehecatl:
 it must write the string "hola" in the block 08 in the smart card, 
 now if you try read again, you will see "hola" as response of read command
 
-============ reding smart cards when is inserted on nfc reader (automatically) ========
+==== reading smart cards when is inserted on nfc reader (automatically) ========
 
 In erlang shell:
 
