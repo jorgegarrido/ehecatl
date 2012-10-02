@@ -6,6 +6,8 @@
 
 ERL_ROOT=/usr/local/lib/erlang
 EHECATL_DIR_LIB=$(shell pwd)
+PCSC=/usr/include/PCSC
+LIBPCSC=/usr/lib/libpcsclite.so
 
 .PHONY: c_src
 
@@ -13,7 +15,7 @@ all: compile_c compile
 
 compile_c: c_src/ehecatl_api_sc.c c_src/ehecatl_port_driver.c
 	@mkdir -p lib
-	gcc -o lib/libehecatl.so -I$(ERL_ROOT)/usr/include/ -I/usr/include/PCSC /usr/lib/libpcsclite.so -fpic -rdynamic -shared c_src/ehecatl_api_sc.c c_src/ehecatl_port_driver.c 
+	gcc -o lib/libehecatl.so -I$(ERL_ROOT)/usr/include/ -I$(PCSC) $(LIBPCSC) -fpic -rdynamic -shared c_src/ehecatl_api_sc.c c_src/ehecatl_port_driver.c 
 	@ldconfig $(EHECATL_DIR_LIB)/
 
 compile: 
