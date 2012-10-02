@@ -29,4 +29,4 @@ clean: ebin lib
 
 ehecatl: ebin lib/libehecatl.so
 	@mkdir -p log
-	erl -pa ebin/ -eval 'application:start(ehecatl)'
+	erl -pa ebin/
