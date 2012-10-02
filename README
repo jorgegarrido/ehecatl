@@ -66,6 +66,10 @@ now if you try read again, you will see "hola" as response of read command
 
 ==== reading smart cards when is inserted on nfc reader (automatically) ========
 
+First open an erlang shell with the correct path:
+
+	$ make ehecatl
+
 In erlang shell:
 
 starts the ehecatl application:
